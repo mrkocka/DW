@@ -59,3 +59,13 @@ footer {
   align-items: center;
   font-weight: 700;
 }
+
+footer a{
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover{
+  color: rgba(0, 0, 0, 0.616);
+  cursor: pointer;
+}
