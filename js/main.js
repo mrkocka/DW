@@ -1,9 +1,9 @@
 
 let container = document.getElementById("js-DWarea"); //célállomás
-let Generalbutton = document.createElement("button"); //Nyomógomb létrehozása
-let DWbutton = document.createElement("button"); 
-let useful = document.createElement("button"); 
-let info = document.createElement("button"); 
+let Generalbutton = document.createElement("button"); //Nyomógomb 
+let DWbutton = document.createElement("button"); //Nyomógomb 
+let useful = document.createElement("button"); //Nyomógomb 
+let info = document.createElement("button"); //Nyomógomb 
 
 
 
@@ -52,7 +52,7 @@ useful.addEventListener("click",clickHandler); //Eseménykezelő
 
 function clickHandler(){ //Az eseménykezelővel futtatott funkció
 
-    alert("He he Pina!");
+    alert("D100!");
     
     }
     
