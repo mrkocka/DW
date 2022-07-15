@@ -1,58 +1,27 @@
+let ChaGenbutton = document.getElementById("ChaGen");
+let dowbutton = document.getElementById("Dow");
+let usefulbutton = document.getElementById("useful");
+let inpressbutton = document.getElementById("inpress");
+let backButton = document.getElementById("js-backButton");
 
-let container = document.getElementById("js-DWarea"); //célállomás
-let Generalbutton = document.createElement("button"); //Nyomógomb 
-let DWbutton = document.createElement("button"); //Nyomógomb 
-let useful = document.createElement("button"); //Nyomógomb 
-let info = document.createElement("button"); //Nyomógomb 
+//Area
 
+let buttonList = document.getElementById("homeButton");
+let downloadArea = document.getElementById("js-dArea");
 
+//Evemt
 
+dowbutton.addEventListener("click", buttonDelete);
+backButton.addEventListener("click", back);
 
-/*Középső Rész létrehozása*/ 
+//Function
 
-div = document.createElement("div"); //Elem létrehozása
+function buttonDelete() {
+  buttonList.classList.add("invisible");
+  downloadArea.style.display = "block";
+}
 
-div.style.backgroundColor = "white"; //Stílus beállítása
-div.style.color = "white";
-
-div.setAttribute("class","DWarea"); //Egyéni paraméter(class) beállítása
-
-/*div.append("Element"); //Szöveg beillesztése*/
-
-container.appendChild(div); //Létrehozott elem tárolóhoz adása
-
-
-
-/*Kezdőképernyő Gombjai*/
-
-/*Karakter Generálás Gomb*/
-Generalbutton.append("Karakter generálás"); //Felirat beállítása
-div.appendChild(Generalbutton); //Hozzáadás az előző elemhez
-Generalbutton.setAttribute("class","button");
-
-DWbutton.append("Letöltés"); //Felirat beállítása
-div.appendChild(DWbutton); //Hozzáadás az előző elemhez
-DWbutton.setAttribute("class","button");
-
-useful.append("Hasznos holmik"); //Felirat beállítása
-div.appendChild(useful); //Hozzáadás az előző elemhez
-useful.setAttribute("class","button");
-
-
-info.append("Hasznos holmik"); //Felirat beállítása
-div.appendChild(info); //Hozzáadás az előző elemhez
-info.setAttribute("class","button");
-
-
-
-Generalbutton.addEventListener("click",clickHandler); //Eseménykezelő
-DWbutton.addEventListener("click",clickHandler); //Eseménykezelő
-useful.addEventListener("click",clickHandler); //Eseménykezelő
-
-
-function clickHandler(){ //Az eseménykezelővel futtatott funkció
-
-    alert("D100!");
-    
-    }
-    
+function back() {
+  buttonList.classList.add("visible");
+  downloadArea.style.display = "none";
+}
